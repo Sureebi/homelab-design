@@ -1,0 +1,15 @@
+# Local raw exports should not be committed.
+raw/
+private/
+*.secret
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
