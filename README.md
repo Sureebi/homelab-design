@@ -2,12 +2,6 @@
 
 Simple public network map for my home lab.
 
-## Diagram
-
-![Homelab topology](assets/homelab-topology.png)
-
-SVG version: [assets/homelab-topology.svg](assets/homelab-topology.svg)
-
 ## Overview
 
 ```text
