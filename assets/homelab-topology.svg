@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Homelab network topology</title>
+  <desc id="desc">A public-safe homelab topology showing internet edge, MikroTik router, home network, homelab hosts, Proxmox, Docker services, and public service boundary.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.38"/>
+    </filter>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1120"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#121826"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" x2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <style>
+      .title { font: 800 52px "Segoe UI", Arial, sans-serif; fill: #f8fafc; }
+      .subtitle { font: 400 22px "Segoe UI", Arial, sans-serif; fill: #cbd5e1; }
+      .section { font: 800 23px "Segoe UI", Arial, sans-serif; fill: #f8fafc; }
+      .label { font: 700 20px "Segoe UI", Arial, sans-serif; fill: #e5e7eb; }
+      .small { font: 500 15px "Segoe UI", Arial, sans-serif; fill: #aebacd; }
+      .tiny { font: 500 13px "Segoe UI", Arial, sans-serif; fill: #94a3b8; }
+      .card { fill: #172033; stroke: #334155; stroke-width: 1.5; filter: url(#shadow); }
+      .soft { fill: #111827; stroke: #263449; stroke-width: 1.5; }
+      .accent { stroke: url(#edge); stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .line { stroke: #475569; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .chip { fill: #0f172a; stroke: #334155; stroke-width: 1; }
+      .chipText { font: 700 13px "Segoe UI", Arial, sans-serif; fill: #cbd5e1; }
+      .green { fill: #052e24; stroke: #22c55e; }
+      .blue { fill: #082f49; stroke: #38bdf8; }
+      .amber { fill: #3b2a0b; stroke: #f59e0b; }
+      .rose { fill: #3b1018; stroke: #fb7185; }
+      .violet { fill: #24124d; stroke: #a78bfa; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+
+  <text x="92" y="88" class="title">Homelab Network Topology</text>
+  <text x="94" y="128" class="subtitle">Public-safe infrastructure map for GitHub and portfolio use</text>
+
+  <g transform="translate(96 174)">
+    <rect class="card" x="0" y="0" width="1408" height="836" rx="22"/>
+
+    <g transform="translate(544 48)">
+      <rect class="blue" x="0" y="0" width="320" height="104" rx="16"/>
+      <text class="label" x="160" y="44" text-anchor="middle">Internet</text>
+      <text class="small" x="160" y="73" text-anchor="middle">public network boundary</text>
+    </g>
+
+    <path class="accent" d="M704 152v78"/>
+
+    <g transform="translate(494 230)">
+      <rect class="green" x="0" y="0" width="420" height="126" rx="18"/>
+      <text class="label" x="210" y="45" text-anchor="middle">MikroTik hAP ax3</text>
+      <text class="small" x="210" y="75" text-anchor="middle">Router / Firewall / Wi-Fi gateway</text>
+      <text class="tiny" x="210" y="101" text-anchor="middle">No public IPs, ports, or raw config shown</text>
+    </g>
+
+    <path class="accent" d="M704 356v76"/>
+    <path class="line" d="M296 432h816"/>
+    <path class="line" d="M296 432v70"/>
+    <path class="line" d="M704 432v70"/>
+    <path class="line" d="M1112 432v70"/>
+
+    <g transform="translate(100 502)">
+      <rect class="soft" x="0" y="0" width="392" height="172" rx="18"/>
+      <text class="section" x="28" y="42">Home Network</text>
+      <text class="small" x="28" y="78">Trusted LAN and Wi-Fi clients</text>
+      <g transform="translate(28 104)">
+        <rect class="chip" x="0" y="0" width="94" height="34" rx="17"/>
+        <text class="chipText" x="47" y="22" text-anchor="middle">Phones</text>
+        <rect class="chip" x="110" y="0" width="104" height="34" rx="17"/>
+        <text class="chipText" x="162" y="22" text-anchor="middle">MacBook</text>
+        <rect class="chip" x="230" y="0" width="82" height="34" rx="17"/>
+        <text class="chipText" x="271" y="22" text-anchor="middle">IoT</text>
+      </g>
+    </g>
+
+    <g transform="translate(520 502)">
+      <rect class="soft" x="0" y="0" width="368" height="172" rx="18"/>
+      <text class="section" x="28" y="42">Raspberry Pi 5</text>
+      <text class="small" x="28" y="78">Lightweight services node</text>
+      <g transform="translate(28 104)">
+        <rect class="chip" x="0" y="0" width="92" height="34" rx="17"/>
+        <text class="chipText" x="46" y="22" text-anchor="middle">Docker</text>
+        <rect class="chip" x="106" y="0" width="106" height="34" rx="17"/>
+        <text class="chipText" x="159" y="22" text-anchor="middle">Portainer</text>
+        <rect class="chip" x="226" y="0" width="100" height="34" rx="17"/>
+        <text class="chipText" x="276" y="22" text-anchor="middle">Dashboard</text>
+      </g>
+    </g>
+
+    <g transform="translate(916 502)">
+      <rect class="soft" x="0" y="0" width="392" height="172" rx="18"/>
+      <text class="section" x="28" y="42">Dell 7060 Micro</text>
+      <text class="small" x="28" y="78">Proxmox virtualization host</text>
+      <g transform="translate(28 104)">
+        <rect class="chip" x="0" y="0" width="78" height="34" rx="17"/>
+        <text class="chipText" x="39" y="22" text-anchor="middle">VMs</text>
+        <rect class="chip" x="92" y="0" width="88" height="34" rx="17"/>
+        <text class="chipText" x="136" y="22" text-anchor="middle">Linux</text>
+        <rect class="chip" x="194" y="0" width="80" height="34" rx="17"/>
+        <text class="chipText" x="234" y="22" text-anchor="middle">Lab</text>
+      </g>
+    </g>
+
+    <path class="line" d="M704 674v44"/>
+    <path class="line" d="M296 674v44"/>
+    <path class="line" d="M1112 674v44"/>
+    <path class="line" d="M296 718h816"/>
+
+    <g transform="translate(190 718)">
+      <rect class="amber" x="0" y="0" width="1028" height="138" rx="18"/>
+      <text class="section" x="36" y="43">Self-hosted Services</text>
+      <text class="small" x="36" y="76">Organized by role instead of exposing internal implementation details</text>
+      <g transform="translate(36 98)">
+        <rect class="chip" x="0" y="0" width="76" height="32" rx="16"/>
+        <text class="chipText" x="38" y="21" text-anchor="middle">Immich</text>
+        <rect class="chip" x="90" y="0" width="124" height="32" rx="16"/>
+        <text class="chipText" x="152" y="21" text-anchor="middle">Reverse proxy</text>
+        <rect class="chip" x="228" y="0" width="102" height="32" rx="16"/>
+        <text class="chipText" x="279" y="21" text-anchor="middle">Monitoring</text>
+        <rect class="chip" x="344" y="0" width="120" height="32" rx="16"/>
+        <text class="chipText" x="404" y="21" text-anchor="middle">Minecraft</text>
+        <rect class="chip" x="478" y="0" width="106" height="32" rx="16"/>
+        <text class="chipText" x="531" y="21" text-anchor="middle">Admin UI</text>
+      </g>
+    </g>
+
+    <g transform="translate(1098 64)">
+      <rect class="rose" x="0" y="0" width="248" height="118" rx="16"/>
+      <text class="label" x="124" y="43" text-anchor="middle">Public Boundary</text>
+      <text class="small" x="124" y="73" text-anchor="middle">Selected services only</text>
+      <text class="tiny" x="124" y="97" text-anchor="middle">No ports or domains shown</text>
+    </g>
+
+    <path class="accent" d="M914 292c120 0 110-170 184-170"/>
+
+    <g transform="translate(70 64)">
+      <rect class="violet" x="0" y="0" width="276" height="118" rx="16"/>
+      <text class="label" x="138" y="42" text-anchor="middle">Security Posture</text>
+      <text class="small" x="138" y="72" text-anchor="middle">Documented without secrets</text>
+      <text class="tiny" x="138" y="96" text-anchor="middle">Architecture over raw config</text>
+    </g>
+  </g>
+
+  <text x="96" y="1055" class="tiny">Public README diagram: intentionally omits IP addresses, MAC addresses, credentials, exact WAN details, and raw configuration exports.</text>
+</svg>

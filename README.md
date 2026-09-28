@@ -1,22 +1,38 @@
 # Homelab Network Topology
 
-Professional public documentation for a home lab / network topology portfolio project.
+Public-safe network topology documentation for a personal homelab environment.
 
-> Status: initial public documentation scaffold. Final topology assets will be added after the architecture is reviewed for public sharing.
+This project presents a high-level infrastructure map suitable for a GitHub README and portfolio. It focuses on architecture, roles, and service layout without exposing sensitive operational details such as public IP addresses, credentials, MAC addresses, exact port forwards, or raw device exports.
 
-## Goal
+## Topology
 
-This repository documents a real homelab network in a public-safe way:
+![Homelab topology](assets/homelab-topology.png)
 
-- Internet edge and router/firewall role
-- Physical hosts and core devices
-- Proxmox nodes, VMs, and containers
-- Raspberry Pi / Linux services
-- Docker workloads
-- Public-facing services, if intentionally included, shown without exposing sensitive details
-- Clean topology diagrams for GitHub README and portfolio use
+[View SVG version](assets/homelab-topology.svg)
 
-## Planned Repository Structure
+## Architecture Summary
+
+The homelab is organized around a small but practical home infrastructure stack:
+
+- **MikroTik hAP ax3** as the network edge, router, firewall, and Wi-Fi gateway.
+- **Home LAN / Wi-Fi** for trusted personal devices.
+- **Homelab segment** for servers, virtualization, containers, and self-hosted services.
+- **Raspberry Pi 5** as a lightweight services node for Docker workloads and dashboard tooling.
+- **Dell OptiPlex 7060 Micro** as a compact virtualization host running Proxmox.
+- **Application services** including media/photo management, dashboarding, reverse proxy, monitoring, game hosting, and admin tooling.
+
+## What This Demonstrates
+
+- Network architecture documentation
+- Public-safe infrastructure design
+- Home lab segmentation and service organization
+- Linux server administration
+- Docker-based self-hosting
+- Proxmox virtualization
+- Reverse proxy and service exposure planning
+- Portfolio-focused technical communication
+
+## Repository Structure
 
 ```text
 homelab-design/
@@ -30,23 +46,8 @@ homelab-design/
     └── public-scope.md
 ```
 
-## Current Diagram Preview
-
-The final diagram will be added after the public architecture summary is confirmed.
-
-![Topology placeholder](assets/topology-placeholder.svg)
-
 ## Public Scope
 
-This repository is intentionally high level. It focuses on architecture, service roles, and infrastructure design decisions without publishing raw device exports or operational details.
+This repository is intentionally high level. It documents the shape of the infrastructure while keeping private implementation details out of the public repo.
 
 See [docs/public-scope.md](docs/public-scope.md) for the public documentation boundaries.
-
-## Documentation Status
-
-- [x] Repository scaffold
-- [x] Public documentation boundaries
-- [ ] Reviewed public architecture summary
-- [ ] Final topology diagram as SVG
-- [ ] Final topology diagram as PNG
-- [ ] Portfolio-ready README
